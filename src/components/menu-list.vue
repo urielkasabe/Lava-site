@@ -2,18 +2,26 @@
   <div>
     <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
     <ul>
-      <li>עמוד הבית</li>
-      <li>תפריט</li>
-      <li>גלריה</li>
-      <li>אודות</li>
-      <li>צור קשר</li>
+      <li><a href="">תפריט</a></li>
+      <li><a href="">גלריה</a></li>
+      <li><a href="#about">אודות</a></li>
+      <li><a href="">צור קשר</a></li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+
+
+
+
+
+
+
+
+
+  /* data() {
     return {
       scrolled: false,
     };
@@ -40,7 +48,7 @@ export default {
         active: this.scrolled
       };
     },
-  },
+  }, */
 };
 </script>
 
@@ -57,10 +65,10 @@ div {
 img {
   position: relative;
   top: 1.3rem;
-  left: 3rem;
+  left: 7rem;
   height: 8rem;
   width: 8rem;
-  margin: 0;
+  margin: 0 2rem;
 }
 
 ul {
@@ -68,7 +76,6 @@ ul {
   list-style: none;
   direction: rtl;
   
-/*   justify-content: center; */
 }
 
 li {
@@ -76,5 +83,16 @@ li {
   font-size: 1.5rem;
   position: relative;
   top: -5rem;
+  right: 10rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(242, 178, 59);
+    text-decoration: underline;
 }
 </style>

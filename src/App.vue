@@ -1,9 +1,18 @@
 <template>
-  <menu-list ></menu-list>
+  <header>
+
+    <menu-list ></menu-list>
+  </header>
 
  <TheCarousel></TheCarousel> 
 
  <AboutUs></AboutUs>
+
+ <followUs></followUs>
+
+ <footer>
+  <TheFooter></TheFooter>
+ </footer>
 
 </template>
 
@@ -11,12 +20,16 @@
 import menuList from '../src/components/menu-list.vue';
 import TheCarousel from '../src/components/UI/TheCarousel.vue';
 import AboutUs from './components/AboutUs.vue';
+import followUs from './components/followUs.vue';
+import TheFooter from './components/TheFooter.vue';
 
 export default {
 components: {
   menuList,
  TheCarousel,
- AboutUs
+ AboutUs,
+ followUs,
+ TheFooter
 },
 }
 
