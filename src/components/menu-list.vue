@@ -1,6 +1,8 @@
 <template>
   <div>
-    <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
+    <router-link to="/">
+      <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
+    </router-link>
     <ul>
       <li><a href="">תפריט</a></li>
       <li><a href="#gallery">גלריה</a></li>
