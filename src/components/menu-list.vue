@@ -17,40 +17,6 @@ export default {
 
 
 
-
-
-
-
-
-
-  /* data() {
-    return {
-      scrolled: false,
-    };
-  },
-  methods: {
-    closeContactModal() {
-      window.removeEventListener("scroll", this.handleScroll);
-      this.scrolled = false;
-    },
-    handleScroll() {
-      this.scrolled = window.scrollY > 0;
-    },
-  },
-  async created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  unmounted() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-
-  computed: {
-    activateClass() {
-      return {
-        active: this.scrolled
-      };
-    },
-  }, */
 };
 </script>
 

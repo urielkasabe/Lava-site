@@ -18,8 +18,6 @@
 
     <the-gallery></the-gallery>
 
-    <hr class="hr-2"/>
-
     <contact-us></contact-us>
   </div>
 
@@ -60,6 +58,7 @@ export default {
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: "Frank Ruhl Libre", serif;
   margin: 0;
 }
