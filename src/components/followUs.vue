@@ -56,12 +56,7 @@ export default {
 </script>
 
 <style scoped>
-div {
-  /* display: flex; */
-  padding: 2rem 0 5rem 0;
-  margin: 0;
-  background: linear-gradient(180deg, black, rgb(35, 35, 35), rgb(69, 68, 68));
-}
+
 
 img {
   height: 30rem;

@@ -3,7 +3,7 @@
     <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
     <ul>
       <li><a href="">תפריט</a></li>
-      <li><a href="">גלריה</a></li>
+      <li><a href="#gallery">גלריה</a></li>
       <li><a href="#about">אודות</a></li>
       <li><a href="">צור קשר</a></li>
     </ul>
