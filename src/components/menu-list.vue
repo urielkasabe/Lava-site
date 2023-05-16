@@ -5,7 +5,7 @@
       <li><a href="">תפריט</a></li>
       <li><a href="#gallery">גלריה</a></li>
       <li><a href="#about">אודות</a></li>
-      <li><a href="">צור קשר</a></li>
+      <li><a href="#contact-us">צור קשר</a></li>
     </ul>
   </div>
 </template>

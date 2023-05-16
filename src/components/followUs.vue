@@ -40,6 +40,7 @@
         </li>
       </ul>
     </div>
+    <a href="../../images/location.gif"></a>
   </div>
 </template>
 
