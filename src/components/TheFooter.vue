@@ -1,6 +1,8 @@
 <template>
   <div>
-    <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
+    <router-link to="/">
+      <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
+    </router-link>
     <section>
       <div class="list">
         <ul>
