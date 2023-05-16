@@ -1,17 +1,22 @@
 <template>
   <div id="contact-us">
     <section class="social-logo">
-      <h1>דברו איתנו!</h1>
+      <h1 v-motion-slide-visible-top>דברו איתנו!</h1>
       <div class="social-div">
-        <a :href="whatsAppLink" id="WhatsApp"><WhatsApp></WhatsApp></a>
-        <a :href="gmailLink" id="mail"><GMail></GMail></a>
-        <a :href="IgLink" id="ig"><IgSvg> </IgSvg></a>
-        <a :href="fbLink" id="fb"><FbSvg></FbSvg></a>
-        <a href="tel:+972524717176" id="phone"><PhoneSvg></PhoneSvg></a>
+        <a v-motion-pop-visible :href="whatsAppLink" id="WhatsApp"
+          ><WhatsApp></WhatsApp
+        ></a>
+        <a v-motion-pop-visible :href="gmailLink" id="mail"><GMail></GMail></a>
+        <a v-motion-pop-visible :href="IgLink" id="ig"><IgSvg> </IgSvg></a>
+        <a v-motion-pop-visible :href="fbLink" id="fb"><FbSvg></FbSvg></a>
+        <a v-motion-pop-visible href="tel:+972524717176" id="phone"
+          ><PhoneSvg></PhoneSvg
+        ></a>
       </div>
       <div class="social">
-        <h2>איפה אנחנו יושבים?</h2>
+        <h2 v-motion-slide-visible-top>איפה אנחנו יושבים?</h2>
         <a
+          v-motion-pop-visible
           href="https://www.google.com/maps/place/Lava+Bar/@32.1818721,34.8304696,13z/data=!4m6!3m5!1s0x151d39520f6ff273:0xb6ae30c939fd1077!8m2!3d32.1818788!4d34.8716693!16s%2Fg%2F11kjk9jv8m"
         >
           <svg
@@ -87,8 +92,8 @@ h1 {
   width: 4rem;
 }
 
-.social a{
-    text-decoration: none;
+.social a {
+  text-decoration: none;
 }
 
 h2 {

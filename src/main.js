@@ -4,13 +4,11 @@ import {createRouter, createWebHistory} from 'vue-router';
 
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
-import ContactUs from "./components/ContactUs.vue";
 import App from "./App.vue";
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [ { path: '/', component: App },
-    {path: '/contact-us', component: ContactUs},
     { path: '/:notFound(.*)', redirect: '/' }
 ],
 scrollBehavior(to, from, savedPosition) {
