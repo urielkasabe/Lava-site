@@ -17,6 +17,10 @@
     <hr class="hr-2"/>
 
     <the-gallery></the-gallery>
+
+    <hr class="hr-2"/>
+
+    <contact-us></contact-us>
   </div>
 
   <footer>
@@ -31,6 +35,7 @@ import AboutUs from "./components/AboutUs.vue";
 import followUs from "./components/followUs.vue";
 import cardBoard from "./components/cardBoard.vue";
 import TheGallery from "./components/TheGallery.vue";
+import ContactUs from "./components/ContactUs.vue";
 import TheFooter from "./components/TheFooter.vue";
 
 export default {
@@ -41,6 +46,7 @@ export default {
     followUs,
     cardBoard,
     TheGallery,
+    ContactUs,
     TheFooter,
   },
 };

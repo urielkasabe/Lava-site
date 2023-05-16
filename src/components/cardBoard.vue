@@ -5,7 +5,7 @@
       <figcaption>
         <h2>צור קשר</h2>
         <p>!כל דבר שאתם צריכים, אנחנו כאן</p>
-        <a href="#"> &#8592; לחץ כאן</a>
+        <a href="#contact-us"> &#8592; לחץ כאן</a>
       </figcaption>
     </figure>
     <figure class="snip1174 blue">
