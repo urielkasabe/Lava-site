@@ -117,6 +117,8 @@ p {
 @media (max-width: 768px) {
   .social-div svg {
   margin: 2rem 1rem 2rem 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 }
 </style>

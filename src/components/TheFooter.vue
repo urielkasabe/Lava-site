@@ -86,10 +86,11 @@ ul a {
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
   section{
     flex-direction: column;
+    width: 100%;
   }
   .work {
     margin-right: 20%;
@@ -99,11 +100,15 @@ ul a {
   .list {
     height: fit-content;
     width: max-content;
+    padding: 0;
+    align-items: center;
   }
 
   ul {
     display: flex;
     padding: 0;
+    margin: 0 auto;
+    text-align: center;
   }
 
   ul li {
@@ -112,5 +117,68 @@ ul a {
   width: max-content;
 }
 
+}
+
+@media (min-width: 768px) {
+  section{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .work {
+    margin-right: 35%;
+    width: max-content;
+    text-align: center;
+  }
+
+  .list {
+    height: fit-content;
+    width: max-content;
+    padding: 0;
+    align-items: center;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  ul li {
+  margin: 0 4rem;
+  padding: 0;
+  width: max-content;
+}
+}
+
+@media (min-width: 1200px) {
+  section {
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  direction: rtl;
+  font-size: 1.3rem;
+}
+
+.work {
+  margin-right: 65%;
+  text-align: center;
+  width: 20%;
+  margin-top: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  display: block;
+}
+
+ul li {
+  margin-bottom: 1rem;
+}
+.work p {
+  margin: 0.1rem;
+}
 }
 </style>

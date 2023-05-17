@@ -90,12 +90,51 @@
   .gallery {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
-  margin: 5rem 2.5rem;
+  margin: 5rem auto;
+  position: relative;
+  left: 2%;
+  width: 90%;
 }
 
 .gallery-item{
-  height: 10rem;
-  width: 10rem;
+  height: 9rem;
+  width: 9rem;
+}
+}
+
+@media (min-width: 768px) {
+  .gallery {
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 1rem;
+  margin: 5rem auto;
+  position: relative;
+  left: 6%;
+  width: 75%;
+}
+
+.gallery-item{
+  height: 15rem;
+  width: 15rem;
+}
+}
+
+@media (min-width: 1200px) {
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 1.5rem;
+  width: 75%;
+  margin: 5rem auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  border-radius: 100% 0% 100% 0% / 19% 83% 17% 81%;
+  box-shadow: 5px 10px 30px black;
+  width: 20rem;
+  height: 20rem;
 }
 }
 </style>

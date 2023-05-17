@@ -51,7 +51,7 @@ export default {
     }
 
     const updateVisibility = () => {
-      isVisible.value = window.innerWidth < 768;
+      isVisible.value = window.innerWidth < 1024;
     };
 
     onMounted(() => {
@@ -83,8 +83,11 @@ div {
 
 img {
   position: relative;
+  display: block;
   top: 1.3rem;
-  left: 7rem;
+  /* left: 7rem; */
+  left: 10%;
+  transform: translateX(-70%);
   height: 8rem;
   width: 8rem;
   margin: 0 2rem;
@@ -157,6 +160,16 @@ a:hover {
     top: -5rem;
     right: 1rem;
   }
+
+  img {
+  position: absolute;
+  top: 1.3rem;
+  left: 50%;
+  transform: translateX(-70%);
+  height: 8rem;
+  width: 8rem;
+  margin: 0 2rem;
+}
   .v-enter-active{
 animation: slide-scale 0.3s ease-out forwards;
 }

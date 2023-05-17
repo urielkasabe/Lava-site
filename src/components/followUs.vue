@@ -1,8 +1,8 @@
 <template>
   <div>
-    <img src="../../images/DSC07764.jpg" alt="" v-motion-slide-visible-left/>
+    <img src="../../images/DSC07764.jpg" alt="" v-motion-slide-visible-left />
     <svg
-    v-motion-slide-visible-top 
+      v-motion-slide-visible-top
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
       viewBox="0 0 512 512"
@@ -27,15 +27,19 @@
         ></path>
       </g>
     </svg>
-    <h1 v-motion-slide-visible-top >עקבו אחרינו ותתעדכנו על כל מה שחדש</h1>
+    <h1 v-motion-slide-visible-top>עקבו אחרינו ותתעדכנו על כל מה שחדש</h1>
     <div class="social">
       <ul>
         <li name="Fb" v-motion-pop-visible>
-          <a href="https://www.facebook.com/LavaBarRaanana/?locale=ky_KG"><FbAnimated></FbAnimated></a>
+          <a href="https://www.facebook.com/LavaBarRaanana/?locale=ky_KG"
+            ><FbAnimated></FbAnimated
+          ></a>
           <label for="Fb">Facebook</label>
         </li>
         <li name="Ig" v-motion-pop-visible>
-          <a href="https://www.instagram.com/lava_bar7/ "><IgAnimated></IgAnimated></a>
+          <a href="https://www.instagram.com/lava_bar7/ "
+            ><IgAnimated></IgAnimated
+          ></a>
           <label for="Ig">Instagram</label>
         </li>
       </ul>
@@ -57,8 +61,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 img {
   height: 30rem;
   width: 40rem;
@@ -69,7 +71,7 @@ img {
   box-shadow: 10px 5px 80px rgb(167, 163, 163);
 }
 
-svg {
+svg, #Volcano {
   display: flex;
   height: 5rem;
   width: 5rem;
@@ -115,19 +117,59 @@ label {
   left: 20%;
 }
 
-@media (max-width: 768px) {
-  img{
+@media (max-width: 1200px) {
+  img {
     width: 20rem;
-    margin: 2rem 3rem ;
+    margin: 2rem auto;
+    float: none;
   }
 
-  div h1{
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  div h1 {
     text-align: center;
-    margin:  2rem;
+    margin: 2rem;
   }
 
-  .social{
-    width: 70%;
+  .social {
+    left: 5%;
+    transform: translateX(0);
+    width: 90%;
+    height: fit-content;
+    align-content: center;
   }
+
+ 
+
+  #Volcano {
+    display: flex;
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem auto 0 auto;
+  position: relative;
+  left: 0;
+  }
+
+
+  svg {
+    margin: 2rem auto;
+    width: 3rem;
+    height: 3rem;
+    left: -50%;
+  }
+
+  label {
+  font-size: 1rem;
+  color: rgb(215, 215, 215);
+  margin: 1rem auto;
+  position: relative;
+  top: 0;
+  left: -50%;
+}
 }
 </style>
