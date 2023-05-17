@@ -89,6 +89,7 @@ h1 {
 
 .social-div svg {
   margin: 2rem 5rem 2rem 5rem;
+  filter: drop-shadow(1rem 0 0.6rem rgb(46, 46, 46));
 }
 
 .social svg {
@@ -111,5 +112,11 @@ p {
   color: white;
   font-size: 1.3rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .social-div svg {
+  margin: 2rem 1rem 2rem 1rem;
+}
 }
 </style>

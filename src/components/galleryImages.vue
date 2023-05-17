@@ -85,4 +85,17 @@
 .gallery-item:hover img {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .gallery {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 5rem 2.5rem;
+}
+
+.gallery-item{
+  height: 10rem;
+  width: 10rem;
+}
+}
 </style>

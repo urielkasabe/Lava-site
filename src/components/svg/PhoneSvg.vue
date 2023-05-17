@@ -19,6 +19,6 @@ svg {
   height: 3rem;
   cursor: pointer;
   margin-top: 0;
-  filter: drop-shadow(1rem 0 0.6rem black);
+  filter: none;
 }
 </style>

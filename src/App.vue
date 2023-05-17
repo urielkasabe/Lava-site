@@ -57,8 +57,11 @@ export default {
   box-sizing: border-box;
 }
 
-body {
+html {
   scroll-behavior: smooth;
+}
+
+body {
   font-family: "Frank Ruhl Libre", serif;
   margin: 0;
   padding: 0;
@@ -86,5 +89,9 @@ hr {
   html{
     width: 100%;
   }
+
+  hr {
+  margin: 5rem auto 0 auto;
+}
 }
 </style>

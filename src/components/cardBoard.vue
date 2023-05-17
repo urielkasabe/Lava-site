@@ -24,6 +24,7 @@ div {
   display: flex;
   margin-top: 10rem;
   justify-content: center;
+  align-items: center;
 }
 
 figure.snip1174 {
@@ -120,5 +121,16 @@ figure.snip1174.hover a {
   -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  figure.snip1174{
+    margin: 1rem auto;
+  }
 }
 </style>

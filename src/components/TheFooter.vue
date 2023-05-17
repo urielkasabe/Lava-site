@@ -72,7 +72,7 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 ul a {
@@ -80,24 +80,37 @@ ul a {
   font-size: 1.5rem;
 }
 
-/* .social-logo {
-  display: block;
-  text-align: center;
-  width: 100%;
-}
-
-.social-div {
-  display: flex;
-  justify-content: center;
-}
-
-.social-div svg {
-  margin: 0 2rem 2rem 2rem;
-}
- */
 .copy {
   text-align: center;
   margin: 0.5rem;
   font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+
+  section{
+    flex-direction: column;
+  }
+  .work {
+    margin-right: 20%;
+    width: max-content;
+  }
+
+  .list {
+    height: fit-content;
+    width: max-content;
+  }
+
+  ul {
+    display: flex;
+    padding: 0;
+  }
+
+  ul li {
+  margin: 0 1rem;
+  padding: 0;
+  width: max-content;
+}
+
 }
 </style>

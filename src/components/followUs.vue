@@ -114,4 +114,20 @@ label {
   top: 10%;
   left: 20%;
 }
+
+@media (max-width: 768px) {
+  img{
+    width: 20rem;
+    margin: 2rem 3rem ;
+  }
+
+  div h1{
+    text-align: center;
+    margin:  2rem;
+  }
+
+  .social{
+    width: 70%;
+  }
+}
 </style>

@@ -1,5 +1,11 @@
 <template>
   <div id="about">
+    <section id="sec-1" v-if="isVisible">
+      <img src="../../images/lavabarwhitesmall.png" alt="">
+    </section>
+  <section id="sec-2">
+
+  
       <svg
       v-motion-slide-visible-top
         fill="none"
@@ -27,8 +33,35 @@
       similique blanditiis corrupti quos autem repudiandae aspernatur nobis
       aperiam adipisci hic esse.
     </h2>
+  </section>
   </div>
 </template>
+
+<script>
+import { ref, onMounted, onBeforeUnmount } from "vue";
+export default {
+  setup() {
+    const isVisible = ref(false);
+ 
+    const updateVisibility = () => {
+      isVisible.value = window.innerWidth < 768;
+    };
+
+    onMounted(() => {
+      updateVisibility();
+      window.addEventListener("resize", updateVisibility);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener("resize", updateVisibility);
+    });
+
+    return {
+      isVisible,
+    };
+  },
+}
+</script>
 
 <style scoped>
 div {
@@ -37,7 +70,7 @@ div {
   background-size: cover;
   opacity: 0.9;
   color: rgb(0, 0, 0);
-  padding: 15rem 0;
+  padding: 10rem 0;
 }
 
 svg{
@@ -60,5 +93,33 @@ h2 {
   width: 55%;
   margin: 0 auto;
 
+}
+
+#sec-1{
+  padding: 5rem 0;
+  margin: 0;
+  background: linear-gradient(180deg, black, rgb(35, 35, 35), rgb(69, 68, 68));
+}
+
+#sec-2{
+  padding-top: 0;
+}
+
+
+img {
+  height: 10rem;
+  width: 10rem;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px){
+  div{
+    padding: 0 ;
+  }
+
+  #sec-2{
+  padding: 8rem 0 5rem 0;
+}
 }
 </style>
