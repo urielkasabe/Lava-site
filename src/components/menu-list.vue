@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div :class="activateClass">
     <router-link to="/">
       <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
     </router-link>
-    <ul>
+    <HamBtn @click="toggleHamburger" v-if="isVisible"></HamBtn>
+    <ul v-if="isVisible && isHamburgerOpen || !isVisible">
       <li><a href="">תפריט</a></li>
       <li><a href="#gallery">גלריה</a></li>
       <li><a href="#about">אודות</a></li>
@@ -13,12 +14,53 @@
 </template>
 
 <script>
+import HamBtn from './UI/HamBtn.vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
 export default {
+  components: {
+    HamBtn
+  },
+  computed: {
+    activateClass() {
+      return {
+        active: this.isVisible,
+        logo:this.isVisible,
+      };
+    },
+  },
 
+  setup() {
+    const isHamburgerOpen = ref(false);
+    const isVisible = ref(false);
 
+    function toggleHamburger() {
+      isHamburgerOpen.value = !isHamburgerOpen.value;
+    }
 
+    const updateVisibility = () => {
+      isVisible.value = window.innerWidth < 768;
+    };
+
+    onMounted(() => {
+      updateVisibility();
+      window.addEventListener('resize', updateVisibility);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', updateVisibility);
+    });
+
+    return {
+      isHamburgerOpen,
+      toggleHamburger,
+      isVisible,
+      
+    };
+  }
 };
 </script>
+
 
 <style scoped>
 
@@ -63,4 +105,18 @@ a:hover{
     color: rgb(242, 178, 59);
     text-decoration: underline;
 }
+
+/* phone */
+.active {
+  width: 100%;
+  font-weight: bold;
+  line-height: 100px;
+  position: fixed;
+  top: 0;
+  background-color: rgb(35, 35, 35);
+  display: block;
+  z-index: 5;
+}
+
+
 </style>

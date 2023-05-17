@@ -10,11 +10,11 @@
   <div class="gray">
     <followUs></followUs>
 
-    <hr/>
+    <hr />
 
     <card-board></card-board>
 
-    <hr class="hr-2"/>
+    <hr class="hr-2" />
 
     <the-gallery></the-gallery>
 
@@ -57,13 +57,9 @@ export default {
   box-sizing: border-box;
 }
 
-html {
+body {
   scroll-behavior: smooth;
   font-family: "Frank Ruhl Libre", serif;
-  margin: 0;
-}
-
-body {
   margin: 0;
   padding: 0;
 }
@@ -74,15 +70,21 @@ body {
   background: linear-gradient(180deg, black, rgb(35, 35, 35), rgb(69, 68, 68));
 }
 
-hr{
+hr {
   margin: 20rem auto 0 auto;
   color: white;
   width: 70%;
 }
 
-.hr-2{
+.hr-2 {
   margin: 10rem auto 0 auto;
   color: white;
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  html{
+    width: 100%;
+  }
 }
 </style>

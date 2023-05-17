@@ -66,6 +66,10 @@ export default {
 </script>
 
 <style scoped>
+
+#contact-us{
+  width: 100%;
+}
 .social-logo {
   display: block;
   text-align: center;
