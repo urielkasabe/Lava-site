@@ -1,75 +1,15 @@
 <template>
   <div class="gallery">
-    <div class="gallery-item skeleton">
+    <div
+      class="gallery-item skeleton"
+      v-for="imageName in imageNames"
+      :key="imageName"
+    >
       <img
-        src="../../images/gallery/DSC07527.jpg"
+        :src="require(`../../images/gallery/${imageName}`)"
         alt="image"
-        @load="imageLoaded('DSC07527.jpg')"
-        v-show="loadedImages.includes('DSC07527.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/DSC07576.jpg"
-        alt="image"
-        @load="imageLoaded('DSC07576.jpg')"
-        v-show="loadedImages.includes('DSC07576.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/DSC07647.jpg"
-        alt="image"
-        @load="imageLoaded('DSC07647.jpg')"
-        v-show="loadedImages.includes('DSC07647.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/DSC07711.jpg"
-        alt="image"
-        @load="imageLoaded('DSC07711.jpg')"
-        v-show="loadedImages.includes('DSC07711.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/DSC07887.jpg"
-        alt="image"
-        @load="imageLoaded('DSC07887.jpg')"
-        v-show="loadedImages.includes('DSC07887.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/DSC08131.jpg"
-        alt="image"
-        @load="imageLoaded('DSC08131.jpg')"
-        v-show="loadedImages.includes('DSC08131.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/DSC08151.jpg"
-        alt="image"
-        @load="imageLoaded('DSC08151.jpg')"
-        v-show="loadedImages.includes('DSC08151.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/DSC07807.jpg"
-        alt="image"
-        @load="imageLoaded('DSC07807.jpg')"
-        v-show="loadedImages.includes('DSC07807.jpg')"
-      />
-    </div>
-    <div class="gallery-item skeleton">
-      <img
-        src="../../images/gallery/IMG_2548.jpg"
-        alt="image"
-        @load="imageLoaded('IMG_2548.jpg')"
-        v-show="loadedImages.includes('IMG_2548.jpg')"
+        @load="imageLoaded(imageName)"
+        v-show="loadedImages.includes(imageName)"
       />
     </div>
   </div>
@@ -80,6 +20,17 @@ export default {
   data() {
     return {
       loadedImages: [],
+      imageNames: [
+        "DSC07527.jpg",
+        "DSC07576.jpg",
+        "DSC07647.jpg",
+        "DSC07711.jpg",
+        "DSC07887.jpg",
+        "DSC08131.jpg",
+        "DSC08151.jpg",
+        "DSC07807.jpg",
+        "IMG_2548.jpg",
+      ],
     };
   },
   methods: {
@@ -87,7 +38,7 @@ export default {
       this.loadedImages.push(imageName);
     },
   },
-}
+};
 </script>
 
 <style>
@@ -112,7 +63,7 @@ export default {
 }
 
 .skeleton {
-  opacity: .7;
+  opacity: 0.7;
   animation: skeleton-loading 1s linear infinite alternate;
 }
 
