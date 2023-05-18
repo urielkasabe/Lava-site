@@ -1,15 +1,14 @@
 <template>
-  <div>
+  <div class="container">
     <router-link to="/">
       <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
     </router-link>
     <section>
       <div class="list">
         <ul>
-          <li><a href="">תפריט</a></li>
-          <li><a href="#gallery">גלריה</a></li>
-          <li><a href="#about">אודות</a></li>
-          <li><a href="#contact-us">צור קשר</a></li>
+          <li v-for="item in menuItems" :key="item.id">
+            <a :href="item.link">{{ item.label }}</a>
+          </li>
         </ul>
       </div>
 
@@ -24,6 +23,21 @@
     <p class="copy">&copy; Uriel Kasabe Vue.js developer ~ 052-8776372</p>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      menuItems: [
+        { id: 1, label: 'תפריט', link: '/menu' },
+        { id: 2, label: 'גלריה', link: '/#gallery' },
+        { id: 3, label: 'אודות', link: '/#about' },
+        { id: 4, label: 'צור קשר', link: '/#contact-us' }
+      ]
+    };
+  }
+};
+</script>
 
 <style scoped>
 div {

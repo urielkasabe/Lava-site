@@ -2,16 +2,17 @@
   <div class="loading-animation">
     <img class="imagen" src="../images/lavabarwhitesmall.png" alt="lava-logo" />
   </div>
-  <h1 class="loading-h1">העמוד בטעינה אנא המתן...</h1>
+<!--   <h1 class="loading-h1">העמוד בטעינה אנא המתן...</h1> -->
   <header>
-    <menu-list></menu-list>
+    <menu-list ></menu-list>
   </header>
+  <router-view v-if="showRouterView"></router-view>
 
-  <TheCarousel></TheCarousel>
+  <TheCarousel v-if="showCmp"></TheCarousel>
 
-  <AboutUs></AboutUs>
+  <AboutUs v-if="showCmp"></AboutUs>
 
-  <div class="gray">
+  <div class="gray" v-if="showCmp">
     <followUs></followUs>
 
     <hr />
@@ -51,6 +52,15 @@ export default {
     ContactUs,
     TheFooter,
   },
+  computed: {
+    showCmp() {
+      return this.$route.path !== "/menu";
+    },
+    showRouterView() {
+      return this.$route.path === "/menu";
+    },
+  },
+
   mounted() {
     window.addEventListener("load", this.hideLoadingAnimation);
   },
@@ -136,7 +146,7 @@ hr {
   width: 5rem;
 }
 
-.loading-h1{
+/* .loading-h1{
   display: block;
   position: fixed;
   top: 55%;
@@ -160,7 +170,7 @@ hr {
   to {
     width: 100%;
   }
-}
+} */
 
 @keyframes spin {
   0% {

@@ -9,10 +9,11 @@
     ></a>
     <transition-group>
       <ul v-if="(isVisible && isHamburgerOpen) || !isVisible" :class="ulActive">
-        <li @click="toggleHamburger" ><a href="">תפריט</a></li>
-        <li @click="toggleHamburger"><a href="#about">עלינו</a></li>
-        <li @click="toggleHamburger" ><a href="#gallery">גלריה</a></li>
-        <li @click="toggleHamburger"><a href="#contact-us">צור קשר</a></li>
+       <li @click="toggleHamburger" ><a href="/menu">תפריט</a></li>
+        <!-- <router-link to="/menu">menu</router-link> -->
+        <li @click="toggleHamburger"><a href="/#about">עלינו</a></li>
+        <li @click="toggleHamburger" ><a href="/#gallery">גלריה</a></li>
+        <li @click="toggleHamburger"><a href="/#contact-us">צור קשר</a></li>
       </ul>
     </transition-group>
   </div>
@@ -73,6 +74,12 @@ export default {
 </script>
 
 <style scoped>
+
+.router-link-active {
+  color: rgb(242, 178, 59);
+  text-decoration: underline;
+}
+
 div {
   background-color: rgb(35, 35, 35);
   margin: 0;
