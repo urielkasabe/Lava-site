@@ -9,10 +9,10 @@
     ></a>
     <transition-group>
       <ul v-if="(isVisible && isHamburgerOpen) || !isVisible" :class="ulActive">
-        <li><a href="">תפריט</a></li>
-        <li><a href="#gallery">גלריה</a></li>
-        <li><a href="#about">אודות</a></li>
-        <li><a href="#contact-us">צור קשר</a></li>
+        <li @click="toggleHamburger" ><a href="">תפריט</a></li>
+        <li @click="toggleHamburger"><a href="#about">עלינו</a></li>
+        <li @click="toggleHamburger" ><a href="#gallery">גלריה</a></li>
+        <li @click="toggleHamburger"><a href="#contact-us">צור קשר</a></li>
       </ul>
     </transition-group>
   </div>
@@ -142,7 +142,7 @@ a:hover {
   background-color: black;
   display: block;
   position: relative;
-  top: -20%;
+  top: 90%;
   left: 50%;
   z-index: 6;
   padding: 5rem 0 2rem 0;

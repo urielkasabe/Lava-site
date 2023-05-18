@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -62,7 +62,7 @@ html {
 }
 
 body {
-  font-family: "Frank Ruhl Libre", serif;
+  font-family: 'Heebo', sans-serif;
   margin: 0;
   padding: 0;
 }

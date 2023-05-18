@@ -93,15 +93,16 @@ ul a {
     width: 100%;
   }
   .work {
-    margin-right: 20%;
-    width: max-content;
+    margin-right: 13%;
+    width: 70%;
   }
 
   .list {
     height: fit-content;
-    width: max-content;
+    width: 70%;
     padding: 0;
     align-items: center;
+  
   }
 
   ul {
@@ -109,6 +110,7 @@ ul a {
     padding: 0;
     margin: 0 auto;
     text-align: center;
+    font-size: 0.5rem;
   }
 
   ul li {
