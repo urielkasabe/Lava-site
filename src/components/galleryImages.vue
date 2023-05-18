@@ -8,8 +8,6 @@
       <img
         :src="require(`../../images/gallery/${imageName}`)"
         alt="image"
-        @load="imageLoaded(imageName)"
-        v-show="loadedImages.includes(imageName)"
       />
     </div>
   </div>
@@ -84,7 +82,7 @@ export default {
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(5deg);
 }
 
 @media (max-width: 768px) {

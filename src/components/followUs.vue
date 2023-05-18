@@ -1,8 +1,8 @@
 <template>
   <div>
-    <img src="../../images/DSC07764.jpg" alt="" v-motion-slide-visible-left />
+    <img src="../../images/DSC07764.jpg" alt="" v-motion-slide-visible-once-left />
     <svg
-      v-motion-slide-visible-top
+    v-motion-slide-visible-once-top
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
       viewBox="0 0 512 512"
@@ -27,16 +27,16 @@
         ></path>
       </g>
     </svg>
-    <h1 v-motion-slide-visible-top>עקבו אחרינו ותתעדכנו על כל מה שחדש</h1>
+    <h1 v-motion-slide-visible-once-top>עקבו אחרינו ותתעדכנו על כל מה שחדש</h1>
     <div class="social">
       <ul>
-        <li name="Fb" v-motion-pop-visible>
+        <li name="Fb" v-motion-pop-visible-once>
           <a href="https://www.facebook.com/LavaBarRaanana/?locale=ky_KG"
             ><FbAnimated></FbAnimated
           ></a>
           <label for="Fb">Facebook</label>
         </li>
-        <li name="Ig" v-motion-pop-visible>
+        <li name="Ig" v-motion-pop-visible-once>
           <a href="https://www.instagram.com/lava_bar7/ "
             ><IgAnimated></IgAnimated
           ></a>
