@@ -2,9 +2,9 @@
   <div class="header__menu">
     <a
       id="header__button"
-      :class="{ hamburger: true, 'hamburger--open': isHamburgerOpen }"
       href="#"
       @click="toggleHamburger"
+      :class="{ hamburger: true }"
     >
       <div class="hamburger__inner"></div>
     </a>
@@ -35,7 +35,7 @@ export default {
 .header__menu {
   position: absolute;
   top: 4rem;
-  right: 20%;
+  right: 15%;
   background-color: transparent;
 }
 

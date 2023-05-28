@@ -3,14 +3,13 @@
     <router-link to="/">
       <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
     </router-link>
-    <HamBtn @click="toggleHamburger" v-if="isVisible"></HamBtn>
+    <HamBtn @click="toggleHamburger" v-if="isVisible" :class="{'hamburger--open': isHamburgerOpen}"></HamBtn>
     <a href="tel:+972524717176" id="phone" v-if="isVisible"
       ><PhoneSvg></PhoneSvg
     ></a>
     <transition-group>
       <ul v-if="(isVisible && isHamburgerOpen) || !isVisible" :class="ulActive">
        <li @click="toggleHamburger" ><a href="/menu">תפריט</a></li>
-        <!-- <router-link to="/menu">menu</router-link> -->
         <li @click="toggleHamburger"><a href="/#about">עלינו</a></li>
         <li @click="toggleHamburger" ><a href="/#gallery">גלריה</a></li>
         <li @click="toggleHamburger"><a href="/#contact-us">צור קשר</a></li>
@@ -125,6 +124,35 @@ a:hover {
 }
 
 /* phone */
+.hamburger {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  z-index: 2;
+}
+
+.hamburger--open .hamburger__inner {
+  background: none;
+}
+
+.hamburger--open .hamburger__inner::before,
+.hamburger--open .hamburger__inner::after {
+  top: 12px;
+}
+
+.hamburger--open .hamburger__inner::before {
+  transform: rotate(-45deg);
+}
+
+.hamburger--open .hamburger__inner::after {
+  transform: rotate(45deg);
+}
+
+
+
+
+
 .active {
   width: 100%;
   font-weight: bold;
@@ -154,7 +182,7 @@ a:hover {
   z-index: 6;
   padding: 5rem 0 2rem 0;
   height: 50rem;
-  width: 50%;
+  width: 100%;
 }
 
 
@@ -165,7 +193,7 @@ a:hover {
     font-size: 1.5rem;
     position: relative;
     top: -5rem;
-    right: 1rem;
+    right: 12rem;
   }
 
   img {

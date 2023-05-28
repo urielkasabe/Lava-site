@@ -1,108 +1,80 @@
 <template>
-    <div class="menu-page">
-      <h1>התפריט שלנו</h1>
-      <div class="menu-items">
-        <div class="menu-item" v-for="item in menuItems" :key="item.id">
-          <img :src="item.image" :alt="item.name" />
-          <div class="item-details">
-            <h2>{{ item.name }}</h2>
-            <p>{{ item.description }}</p>
-            <p class="price">{{ item.price }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        menuItems: [
-          {
-            id: 1,
-            name: "מנה אחת",
-            description: "מנה טעימה ומרגשת",
-            price: "₪25",
-            image: "../../images/meal1.jpg"
-          },
-          {
-            id: 2,
-            name: "מנה שנייה",
-            description: "מנה עשירה ומשביעה רעבים",
-            price: "₪35",
-            image: "../../images/meal2.jpg"
-          },
-          {
-            id: 1,
-            name: "מנה אחת",
-            description: "מנה טעימה ומרגשת",
-            price: "₪25",
-            image: "../../images/meal1.jpg"
-          },
-          {
-            id: 1,
-            name: "מנה אחת",
-            description: "מנה טעימה ומרגשת",
-            price: "₪25",
-            image: "../../images/meal1.jpg"
-          },
-          {
-            id: 1,
-            name: "מנה אחת",
-            description: "מנה טעימה ומרגשת",
-            price: "₪25",
-            image: "../../images/meal1.jpg"
-          },
-        ]
-      };
-    }
-  };
-  </script>
-  
-  <style scoped>
-  .menu-page {
-    text-align: center;
-  }
-  
-  .menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .menu-item {
-    width: 300px;
-    padding: 1rem;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu-item img {
+  <div>
+    <img v-if="isVisible" :src="menuFoodMob" alt="menu-food" class="food" />
+    <img v-else :src="menuFood" alt="menu-food" class="food" />
+    <img v-if="isVisible" :src="menuDrinksMob" alt="menu-drinks" />
+    <img v-else :src="menuDrinks" alt="menu-drinks" />
+  </div>
+</template>
+
+<script>
+import menuFood from "../../images/menu/desk-01.jpg";
+import menuDrinks from "../../images/menu/desk-02.jpg";
+import menuFoodMob from "../../images/menu/Menu_pages-to-jpg-0001.jpg";
+import menuDrinksMob from "../../images/menu/Menu_pages-to-jpg-0002.jpg";
+
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+export default {
+  setup() {
+    const isVisible = ref(false);
+
+    const updateVisibility = () => {
+      isVisible.value = window.innerWidth < 1024;
+    };
+
+    onMounted(() => {
+      updateVisibility();
+      window.addEventListener("resize", updateVisibility);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener("resize", updateVisibility);
+    });
+
+    return {
+      isVisible,
+      menuFood,
+      menuFoodMob,
+      menuDrinks,
+      menuDrinksMob,
+    };
+  },
+};
+</script>
+
+<style scoped>
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%;
+}
+
+img {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem;
+  border: 18px solid rgb(60, 60, 60);
+}
+
+.food {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  div {
+    margin: 10rem auto 3rem auto;
     width: 100%;
-    border-radius: 8px;
   }
-  
-  .item-details {
-    margin-top: 1rem;
+
+  img {
+    margin: 2rem;
+    border: 8px solid rgb(60, 60, 60);
   }
-  
-  .item-details h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
+
+  .food {
+    margin-bottom: 1rem;
   }
-  
-  .item-details p {
-    margin-top: 0.5rem;
-    color: #777;
-  }
-  
-  .price {
-    color: #333;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  </style>
-  
+}
+</style>
