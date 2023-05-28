@@ -45,8 +45,8 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
   width: 75%;
-  margin: 5rem auto;
-  align-items: center;
+  margin: 0 auto;
+
 }
 
 .gallery-item {
@@ -123,7 +123,10 @@ export default {
     grid-template-columns: repeat(3, 3fr);
     grid-gap: 1.5rem;
     width: 75%;
-    margin: 5rem auto;
+     margin: 5rem auto;
+    position: relative;
+  left: 50%;
+  transform: translateX(-67%);
   }
 
   .gallery-item {
