@@ -49,14 +49,14 @@ export default {
 .over{
   width: 100%;
   height: 100%;
-  background: linear-gradient(160deg, gray, black);
+  background: url('../../images/Untitled.jpeg');
 }
 
 .menu-img {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 70%;
+  width: 60%;
 }
 
 img {
