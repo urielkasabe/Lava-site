@@ -91,6 +91,7 @@ export default {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: -15rem;
 }
 
 body {
@@ -184,6 +185,7 @@ hr {
 @media (max-width: 768px) {
   html {
     width: 100%;
+    scroll-padding: 11rem;
   }
 
   hr {

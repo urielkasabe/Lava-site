@@ -10,7 +10,7 @@
     <transition-group>
       <ul v-if="(isVisible && isHamburgerOpen) || !isVisible" :class="ulActive">
        <li @click="toggleHamburger" ><a href="/menu">תפריט</a></li>
-        <li @click="toggleHamburger"><a href="/#about">עלינו</a></li>
+        <li @click="toggleHamburger"><a href="/#sec-2">עלינו</a></li>
         <li @click="toggleHamburger" ><a href="/#gallery">גלריה</a></li>
         <li @click="toggleHamburger"><a href="/#contact-us">צור קשר</a></li>
       </ul>

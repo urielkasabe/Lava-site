@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <img v-if="isVisible" :src="menuFoodMob" alt="menu-food" class="food" />
-    <img v-else :src="menuFood" alt="menu-food" class="food" />
-    <img v-if="isVisible" :src="menuDrinksMob" alt="menu-drinks" />
-    <img v-else :src="menuDrinks" alt="menu-drinks" />
+  <div class="over">
+    <div class="menu-img">
+      <img v-if="isVisible" :src="menuFoodMob" alt="menu-food" class="food" />
+      <img v-else :src="menuFood" alt="menu-food" class="food" />
+      <img v-if="isVisible" :src="menuDrinksMob" alt="menu-drinks" />
+      <img v-else :src="menuDrinks" alt="menu-drinks" />
+    </div>
   </div>
 </template>
 
@@ -44,7 +46,13 @@ export default {
 </script>
 
 <style scoped>
-div {
+.over{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, gray, black);
+}
+
+.menu-img {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
