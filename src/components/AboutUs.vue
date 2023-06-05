@@ -1,13 +1,11 @@
 <template>
   <div id="about">
     <section id="sec-1" v-if="isVisible">
-      <img src="../../images/lavabarwhitesmall.png" alt="">
+      <img src="../../images/lavabarwhitesmall.png" alt="" />
     </section>
-  <section id="sec-2">
-
-  
+    <section id="sec-2">
       <svg
-      v-motion-slide-visible-top
+        v-motion-slide-visible-top
         fill="none"
         stroke="currentColor"
         stroke-width="1.5"
@@ -26,14 +24,17 @@
           d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"
         ></path>
       </svg>
-    <h1 v-motion-slide-visible-top>קצת עלינו</h1>
-    <h2 v-motion-slide-visible-top>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
-      quidem error est debitis mollitia! Dolor ea suscipit, necessitatibus,
-      similique blanditiis corrupti quos autem repudiandae aspernatur nobis
-      aperiam adipisci hic esse.
-    </h2>
-  </section>
+      <h1 v-motion-slide-visible-top>קצת עלינו</h1>
+      <h2 v-motion-slide-visible-top>
+        בר קוקטיילים שכונתי ומפתיע, בלב ליבה של רעננה. בעיצוב מלוטש ומסוגנן,
+        אוירה תוססת ומוזיקה אופנתית, מזמינים אתכם לבילוי לילי מדהים. אנחנו לא רק
+        מצטיינים ביצירת קוקטיילים מדהימים אלא גם בהיצע הקולינרי שלנו. תפריט בשרי
+        מעולה שישלים את בחירת המשקה שלכם. בין אם אתם חושקים בהמבורגר אסאדו
+        עסיסי, כריך קורנביף ניו יורקר או סלט שוק מעולה, אנחנו פה לספק לכם את כל
+        החשקים בשימוש בחומרי הגלם הטובים ביותר כדי להבטיח בילוי בלתי נשכח. 
+      </h2>
+      <h2  v-motion-slide-visible-top>  אז אם אתם מוכנים לצאת למסע לילי לוהט, קוקטיילים יוצאי דופן, מטבח מפתה ואווירה מחשמלת, בואו אלינו ותנו ללאבה לזרום לכם בורידים!</h2>
+    </section>
   </div>
 </template>
 
@@ -42,7 +43,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 export default {
   setup() {
     const isVisible = ref(false);
- 
+
     const updateVisibility = () => {
       isVisible.value = window.innerWidth < 768;
     };
@@ -60,7 +61,7 @@ export default {
       isVisible,
     };
   },
-}
+};
 </script>
 
 <style scoped>
@@ -73,38 +74,36 @@ div {
   padding: 10rem 0;
 }
 
-svg{
-    height: 5rem;
-    width: 5rem;
-    margin: 1rem auto 0 auto;
-    position: relative;
-    top: 10%;
+svg {
+  height: 5rem;
+  width: 5rem;
+  margin: 1rem auto 0 auto;
+  position: relative;
+  top: 10%;
 }
 
 h1 {
   font: 700;
   font-size: 3rem;
   margin-top: 0;
-
 }
 
 h2 {
   font: 400;
-  width: 55%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 1rem auto;
+  direction: rtl;
+} 
 
-}
-
-#sec-1{
+#sec-1 {
   padding: 5rem 0;
   margin: 0;
   background: linear-gradient(180deg, black, rgb(35, 35, 35), rgb(69, 68, 68));
 }
 
-#sec-2{
+#sec-2 {
   padding-top: 0;
 }
-
 
 img {
   height: 10rem;
@@ -113,13 +112,17 @@ img {
   margin: 0;
 }
 
-@media (max-width: 768px){
-  div{
-    padding: 0 ;
+@media (max-width: 768px) {
+  div {
+    padding: 0;
   }
 
-  #sec-2{
-  padding: 8rem 0 5rem 0;
-}
+  h2{
+    font-size:1.3rem;
+  }
+
+  #sec-2 {
+    padding: 8rem 0 5rem 0;
+  }
 }
 </style>
