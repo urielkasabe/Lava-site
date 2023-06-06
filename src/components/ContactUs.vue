@@ -9,7 +9,7 @@
         <a v-motion-pop-visible-once :href="gmailLink" id="mail"><GMail></GMail></a>
         <a v-motion-pop-visible-once :href="IgLink" id="ig"><IgSvg> </IgSvg></a>
         <a v-motion-pop-visible-once :href="fbLink" id="fb"><FbSvg></FbSvg></a>
-        <a v-motion-pop-visible-once href="tel:+972524717176" id="phone"
+        <a v-motion-pop-visible-once href="tel:+972532799207" id="phone"
           ><PhoneSvg></PhoneSvg
         ></a>
       </div>
@@ -31,7 +31,7 @@
               class="color000000 svgShape"
             ></path>
           </svg>
-          <p>אחוזה 142, רעננה</p>
+          <p>היובל 7, רעננה</p>
         </a>
       </div>
     </section>
@@ -57,8 +57,8 @@ export default {
     return {
       gmailLink: "mailto: lavabar142@gmail.com",
       whatsAppLink:
-        "https://wa.me/972524717176?text=שלום,%20רציתי%20להזמין%20מקום%20להיום%20בערב%20.",
-      fbLink: "https://www.facebook.com/LavaBarRaanana/?locale=ky_KG",
+        "https://wa.me/972532799207?text=שלום,%20רציתי%20להזמין%20מקום%20להיום%20בערב%20.",
+      fbLink: "https://www.facebook.com/LavaBarRaanana/",
       IgLink: "https://www.instagram.com/lava_bar7/",
     };
   },
