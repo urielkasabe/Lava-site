@@ -72,13 +72,21 @@ img {
 
 @media (max-width: 1024px) {
   div {
-    margin: 10rem auto 3rem auto;
+    margin: 10rem auto 0 auto;
     width: 100%;
   }
 
   img {
     margin: 2rem;
+    height: 120%;
+    width: 120%;
     border: 8px solid rgb(60, 60, 60);
+    position: relative;
+    left: -25%;
+  }
+
+  img:hover{
+    transform: scale(1.2);
   }
 
   .food {

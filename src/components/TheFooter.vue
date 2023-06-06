@@ -112,7 +112,7 @@ ul a {
 
   .list {
     height: fit-content;
-    width: 70%;
+    width: 100%;
     padding: 0;
     align-items: center;
   
@@ -122,6 +122,7 @@ ul a {
     display: flex;
     padding: 0;
     margin: 0 auto;
+    justify-content: center;
     text-align: center;
     font-size: 0.5rem;
   }
@@ -130,6 +131,10 @@ ul a {
   margin: 0 1rem;
   padding: 0;
   width: max-content;
+}
+
+ul li a{
+  font-size: 1.3rem;
 }
 
 }
