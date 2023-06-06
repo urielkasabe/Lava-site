@@ -31,7 +31,7 @@
               class="color000000 svgShape"
             ></path>
           </svg>
-          <p>היובל 7, רעננה</p>
+          <p>היובל 7,  רעננה</p>
         </a>
       </div>
     </section>

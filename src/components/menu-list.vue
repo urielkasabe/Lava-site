@@ -4,7 +4,7 @@
       <img src="../../images/lavabarwhitesmall.png" alt="lava-logo" />
     </router-link>
     <HamBtn @click="toggleHamburger" v-if="isVisible" :class="{'hamburger--open': isHamburgerOpen}"></HamBtn>
-    <a href="tel:+972524717176" id="phone" v-if="isVisible"
+    <a href="tel:+972532799207" id="phone" v-if="isVisible"
       ><PhoneSvg></PhoneSvg
     ></a>
     <transition-group>
