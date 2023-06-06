@@ -11,6 +11,7 @@
     "@vueuse/motion": "^2.0.0-beta.12",
     "core-js": "^3.8.3",
     "element-plus": "^2.3.4",
+    "firebase": "^9.22.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.13"
   },
@@ -22,5 +23,17 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urielkasabe/Lava-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urielkasabe/Lava-site/issues"
+  },
+  "homepage": "https://github.com/urielkasabe/Lava-site#readme"
 }

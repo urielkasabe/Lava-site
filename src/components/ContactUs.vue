@@ -55,7 +55,7 @@ export default {
   },
   data() {
     return {
-      gmailLink: "mailto: lava-bar@gmail.com",
+      gmailLink: "mailto: lavabar142@gmail.com",
       whatsAppLink:
         "https://wa.me/972524717176?text=שלום,%20רציתי%20להזמין%20מקום%20להיום%20בערב%20.",
       fbLink: "https://www.facebook.com/LavaBarRaanana/?locale=ky_KG",
