@@ -31,7 +31,7 @@
     <div class="social">
       <ul>
         <li name="Fb" v-motion-pop-visible-once>
-          <a href="https://www.facebook.com/LavaBarRaanana/?locale=ky_KG"
+          <a href="https://www.facebook.com/LavaBarRaanana"
             ><FbAnimated></FbAnimated
           ></a>
           <label for="Fb">Facebook</label>

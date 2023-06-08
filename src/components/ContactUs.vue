@@ -9,7 +9,7 @@
         <a v-motion-pop-visible-once :href="gmailLink" id="mail"><GMail></GMail></a>
         <a v-motion-pop-visible-once :href="IgLink" id="ig"><IgSvg> </IgSvg></a>
         <a v-motion-pop-visible-once :href="fbLink" id="fb"><FbSvg></FbSvg></a>
-        <a v-motion-pop-visible-once href="tel:+972532799207" id="phone"
+        <a v-motion-pop-visible-once href="tel:+972532799207" id="phone" title="0532799207"
           ><PhoneSvg></PhoneSvg
         ></a>
       </div>

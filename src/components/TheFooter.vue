@@ -18,8 +18,10 @@
         <h3>כשר- בהשגחת רבנות רעננה</h3>
       </div>
     </section>
-
-    <p class="copy">&copy; Uriel Kasabe Vue.js developer ~ 052-8776372</p>
+    
+    <a href="https://www.linkedin.com/in/uriel-kasabe" id="copyA">
+      <p class="copy">&copy; Uriel Kasabe web developer ~ Linkedin</p>
+    </a>
   </div>
 </template>
 
@@ -28,13 +30,13 @@ export default {
   data() {
     return {
       menuItems: [
-        { id: 1, label: 'תפריט', link: '/menu' },
-        { id: 2, label: 'גלריה', link: '/#gallery' },
-        { id: 3, label: 'אודות', link: '/#about' },
-        { id: 4, label: 'צור קשר', link: '/#contact-us' }
-      ]
+        { id: 1, label: "תפריט", link: "/menu" },
+        { id: 2, label: "גלריה", link: "/#gallery" },
+        { id: 3, label: "אודות", link: "/#about" },
+        { id: 4, label: "צור קשר", link: "/#contact-us" },
+      ],
     };
-  }
+  },
 };
 </script>
 
@@ -99,9 +101,13 @@ ul a {
   font-size: 1rem;
 }
 
-@media (max-width: 480px) {
+#copyA {
+  color: inherit;
+  text-decoration: none;
+}
 
-  section{
+@media (max-width: 480px) {
+  section {
     flex-direction: column;
     width: 100%;
   }
@@ -115,7 +121,6 @@ ul a {
     width: 100%;
     padding: 0;
     align-items: center;
-  
   }
 
   ul {
@@ -128,22 +133,20 @@ ul a {
   }
 
   ul li {
-  margin: 0 1rem;
-  padding: 0;
-  width: max-content;
-}
+    margin: 0 1rem;
+    padding: 0;
+    width: max-content;
+  }
 
-ul li a{
-  font-size: 1.3rem;
-}
-
+  ul li a {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 768px) {
-  section{
+  section {
     flex-direction: column;
     width: 100%;
-    
   }
   .work {
     margin-right: 35%;
@@ -165,40 +168,40 @@ ul li a{
   }
 
   ul li {
-  margin: 0 4rem;
-  padding: 0;
-  width: max-content;
-}
+    margin: 0 4rem;
+    padding: 0;
+    width: max-content;
+  }
 }
 
 @media (min-width: 1200px) {
   section {
-  display: flex;
-  flex-direction: row;
-  text-align: right;
-  direction: rtl;
-  font-size: 1.3rem;
-}
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    direction: rtl;
+    font-size: 1.3rem;
+  }
 
-.work {
-  margin-right: 65%;
-  text-align: center;
-  width: 20%;
-  margin-top: 0;
-  padding: 0;
-}
+  .work {
+    margin-right: 65%;
+    text-align: center;
+    width: 20%;
+    margin-top: 0;
+    padding: 0;
+  }
 
-ul {
-  list-style: none;
-  margin: 0;
-  display: block;
-}
+  ul {
+    list-style: none;
+    margin: 0;
+    display: block;
+  }
 
-ul li {
-  margin-bottom: 1rem;
-}
-.work p {
-  margin: 0.1rem;
-}
+  ul li {
+    margin-bottom: 1rem;
+  }
+  .work p {
+    margin: 0.1rem;
+  }
 }
 </style>
